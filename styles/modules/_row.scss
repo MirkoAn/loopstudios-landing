@@ -1,0 +1,18 @@
+.row {
+  @include media(desktop-l) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
+.column {
+  @include media(desktop-l) {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+}

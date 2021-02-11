@@ -1,0 +1,67 @@
+.hero {
+  background: url('../../images/mobile/image-hero.jpg') no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  @include media(desktop-l) {
+    background: url('../../images/desktop/image-hero.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: none;
+
+    @include media(desktop-l) {
+      display: flex;
+
+      li {
+        margin-right: 20px;
+      }
+
+      a {
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        color: $white-color;
+
+        &:hover {
+          border-bottom: 1px solid $white-color;
+        }
+      }
+    }
+  }
+
+  &__hamburger-menu {
+    cursor: pointer;
+    @include media(desktop-l) {
+      display: none;
+    }
+  }
+
+  &__slogan {
+    text-transform: uppercase;
+    margin-top: 120px;
+    padding-left: 30px;
+    font-size: 30px;
+    line-height: 45px;
+    color: $white-color;
+    font-family: $primary-font;
+    border: 1px solid $white-color;
+
+    @include media(desktop-l) {
+      max-width: 500px;
+      font-size: 36px;
+      line-height: 64px;
+      letter-spacing: 3px;
+    }
+  }
+}

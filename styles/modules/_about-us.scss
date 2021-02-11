@@ -1,0 +1,53 @@
+.about-us {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include media(desktop-l) {
+      flex-direction: row;
+      z-index: 3;
+    }
+  }
+
+  &__description {
+
+    padding: 20px 60px;
+
+    @include media(desktop-l) {
+      width: 480px;
+      background-color: $white-color;
+      z-index: 5;
+      position: absolute;
+      bottom: 20px;
+      left: 54%;
+    }
+    
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 400;
+      font-family: $secondary-font;
+    }
+
+    p {
+      color: $veryDarkGray-color;
+      font-weight: 500;
+      line-height: 24px;
+
+      @include media(desktop-l) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  
+}
